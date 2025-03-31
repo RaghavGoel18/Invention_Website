@@ -1,7 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
-
+.showcase{
+	
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	align-content: center;
+	
+}
 .site-header {
     display: flex;
     align-items: center; 
@@ -31,7 +38,7 @@
 .wrapper{
 	
 	width: 100%;
-	max-width: 1000px;
+	max-width: 1300px;
 	margin: auto;
 	
 }
