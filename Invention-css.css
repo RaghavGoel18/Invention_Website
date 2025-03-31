@@ -21,6 +21,13 @@
 	
 }
 
+.showcase-item:hover{
+	
+	transform: translateY(-4px);
+	
+	
+}
+
 .site-header {
     display: flex;
     align-items: center; 
