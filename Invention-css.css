@@ -9,6 +9,18 @@
 	align-content: center;
 	
 }
+
+.showcase-item {
+	
+	border-radius: 15px;
+	padding: 1.5em;
+	background-color: #9E9B9B;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	width: calc(33% - 13px);
+	
+	
+}
+
 .site-header {
     display: flex;
     align-items: center; 
@@ -83,6 +95,21 @@ nav a {
 nav a:hover {
 	
     color: #d35400;
+    text-decoration: underline;
+	
+}
+
+a {
+	
+    text-decoration: none;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+	
+}
+
+a:hover {
+	
+	color: #d35400;
     text-decoration: underline;
 	
 }
