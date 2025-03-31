@@ -17,7 +17,7 @@
 	background-color: #9E9B9B;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	width: calc(33% - 13px);
-	
+	margin-bottom: 50px;
 	
 }
 
