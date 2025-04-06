@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+
+
 .Intro_Text{
 	
 	max-width: 800px;
@@ -73,6 +76,13 @@
 }
 
 .primary-statement{
+	
+	text-align: center;
+	
+	
+}
+
+h1{
 	
 	text-align: center;
 	
