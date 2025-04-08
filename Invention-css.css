@@ -1,259 +1,347 @@
 @charset "utf-8";
 /* CSS Document */
 
-
-
-
-.Intro_Text{
-	
-	max-width: 800px;
-	margin: 0 auto;
-	
-	
+/* --- Text Alignment --- */
+/* Ensure H1 is centered (should already be present) */
+h1, h3 { 
+  text-align: center; 
 }
 
-
-.showcase{
-	
-	display: flex;
-	justify-content: space-between;
-	gap: 20px;
-	
-	
+/* Add rule to center the secondary statement */
+.secondary-statement {
+  text-align: center;
+  margin-bottom: 20px; /* Add some space below the subtitle */
+  color: #555; /* Optional: Slightly different color */
+  font-size: 1.1em; /* Optional: Adjust size */
 }
 
-.showcase-item {
-	
-	border-radius: 15px;
-	padding: 1.5em;
-	background-color: #9E9B9B;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	width: calc(33% - 13px);
-	margin-bottom: 50px;
-	
+/* --- General Image Styles --- */
+/* Ensure this rule is present to center block images */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; /* Make all images responsive by default */
+  height: auto;    /* Maintain aspect ratio */
 }
 
-.showcase-item:hover{
-	
-	transform: translateY(-4px);
-	
-	
+/* --- Lead Display Area --- */
+.lead-display {
+  /* No specific centering needed here, acts as container */
+  margin-top: 20px; /* Add space above this section */
 }
 
-.site-header {
-    display: flex;
-    align-items: center; 
-    padding: 10px;
-    height: 200px;
-    position: relative;
+/* Style the lead image specifically if needed */
+.lead-display img {
+   /* The general img rule handles centering and responsiveness */
+   /* You can override width here if needed, but max-width is good */
+   /* Example: width: 500px; /* Max width set by attribute, CSS can override */
+   margin-bottom: 25px; /* Add space below the main image */
 }
 
-.site-logo {
-	
-    height: 200px;
-    
+/* --- Intro Text Paragraphs --- */
+.Intro_Text {
+  /* Remove redundant width/margin rules if inside .wrapper */
+  /* max-width: 800px; */ /* Remove this */
+  /* margin: 0 auto; */   /* Remove this */
+  
+  /* Keep text left-aligned (handled by general 'p' rule) */
+  /* Add vertical spacing between intro paragraphs */
+  margin-bottom: 15px; 
 }
 
-.site-nav {
-	
-    display: flex;
-    gap: 50px; 
-    justify-content: space-around;
-    margin-right: auto; 
-	margin-left: auto;
-	width: auto;
-	height: auto;
-	margin-top: 30px;
-	
+/* Ensure default paragraph alignment is left */
+p {
+  text-align: left;
 }
 
-.wrapper{
-	
-	width: 100%;
-	max-width: 1300px;
-	margin: auto;
-	
+/* Keep caption centered if needed */
+article .Caption {
+  /* ... existing styles ... */
+  text-align: center; 
 }
 
-.primary-statement{
-	
-	text-align: center;
-	
-	
+/* Center author line if desired */
+article > p:first-of-type { 
+  /* ... existing styles ... */
+  text-align: center; 
 }
 
-h1{
-	
-	text-align: center;
-	
-	
+/* Other styles remain the same */
+
+
+
+
+
+/* --- Base Styles --- */
+body {
+  background-color: #f4f4f4;
+  margin: 0; /* Remove default body margin */
+  font-family: 'Lato', sans-serif;
+  color: #333; /* Default text color */
 }
 
-.Lead-Display-Mixed{
-	
-	
-	
-}
-
-.secondary-statement{
-	
-	text-align: center;
-	
-}
-
-header {
-	
-    display: flex;
-	width: 100%;
-	max-width: 1000px;
-	margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    background-color: #f8efe4;
-	
-}
-
-
-
-nav a {
-	
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-    font-family: 'Lato', sans-serif;
-	
-}
-
-nav a:hover {
-	
-    color: #d35400;
-    text-decoration: underline;
-	
-}
-
+/* --- General Link Styles --- */
 a {
-	
-    text-decoration: none;
-    color: #333;
-    font-family: 'Lato', sans-serif;
-	
+  text-decoration: none;
+  color: #333; /* Default link color */
+  font-family: 'Lato', sans-serif; /* Ensure consistency */
 }
 
 a:hover {
-	
-	color: #d35400;
-    text-decoration: underline;
-	
+  color: #d35400;
+  text-decoration: underline;
 }
 
-.welcome {
-	
-    text-align: center;
-    padding: 40px;
-    font-family: 'Playfair Display', serif;
-    color: #2e4f3d;
-	
+/* --- Text Alignment --- */
+/
+p {
+  text-align: left;
 }
 
-.featured-image img {
-	
-    max-width: 100%;
-    border-radius: 10px;
-	
+/* Center headings if desired */
+h1, h2, h3 { 
+  text-align: center;
+}
+/* Keep caption centered if needed */
+article .Caption {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  color: #555;
+  text-align: center; /* Explicitly center caption */
 }
 
-.lead-display{
-	
-	
-	
-	
+
+/* --- Main Wrapper (for <main> content) --- */
+.wrapper {
+  max-width: 800px; /* Maximum width for main content area */
+  width: 100%;     /* Use available width up to max-width */
+  margin-left: auto;  /* Center the block */
+  margin-right: auto; /* Center the block */
+  padding: 0 15px; /* Space on sides, prevents content touching edge */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
-.highlights {
-	
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-	
+/* --- Header Styles (Full Width) --- */
+.site-header {
+  background-color: #f8efe4; /* Apply background to the outer header */
+
 }
 
-.highlight-item {
-	
-    flex: 1;
-    background-color: #fff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-	
+/* Styles for the CONTENT inside the header */
+.header-content {
+  /* Uses .wrapper for max-width, margin, padding */
+  display: flex;            /* Arrange logo and nav side-by-side */
+  align-items: center;    /* Vertically center logo and nav */
+  justify-content: space-between; /* Push logo left, nav right */
+  height: 200px;          /* Set the desired height for header content area */
+  padding-top: 10px;      /* Restore specific padding if needed */
+  padding-bottom: 10px;
 }
 
+.site-logo {
+  height: 180px; /* Adjust height to fit within header-content height+padding */
+  width: auto; /* Maintain aspect ratio */
+  display: block; 
+}
+
+.site-nav {
+  display: flex; /* Keep nav links in a row */
+  gap: 40px;     /* Space between nav links */
+  margin-top: 26px;
+}
+
+.site-nav a {
+  /* Inherits general 'a' styles */
+  
+}
+
+/* --- Main Content Styles --- */
+article {
+  margin-bottom: 50px; /* Space below each article */
+}
+
+article > img {
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+  display: block; /* Remove extra space below image */
+  margin-left: auto; /* Center image if needed (within its container) */
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+/* Style for Author line */
+article > p:first-of-type { /* Selects first <p> directly under article */
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 15px; /* Space below author line */
+  text-align: center; /* Center author line if desired */
+}
+
+/* --- Review Layout (Side-by-Side) --- */
+.review-layout-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 25px;       /* Space between text and features box */
+  margin-top: 20px; /* Space above this section */
+  align-items: center; /* Vertically center the columns */
+}
+
+/* Features Box */
+.Features {
+  border: 1px solid #A8A7A7; /* Consolidated border style */
+  background-color: #f8f8f8;
+  padding: 15px 20px;
+  flex: 0 0 280px; /* Fixed width for the box */
+  box-sizing: border-box;
+}
+
+.Features ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.Features li {
+  margin-bottom: 6px;
+}
+
+.Features li:last-child {
+  margin-bottom: 0;
+}
+
+/* Main Text Column in Review */
+.review-main-text {
+  flex: 1; /* Takes remaining horizontal space */
+  min-width: 250px; /* Prevents getting too narrow before wrapping */
+  box-sizing: border-box;
+}
+
+.review-main-text > p:first-child {
+  margin-top: 0; /* Remove extra space above first paragraph */
+}
+
+
+/* --- Footer Styles (Full Width) --- */
 footer {
-	
-    background-color: #2e4f3d; 
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-family: 'Lato', sans-serif;
-	
-	
+  background-color: #2e4f3d;
+  color: #fff;
+  padding: 20px 0; /* Padding top/bottom, 0 left/right */
+  margin-top: 40px; /* Add some space above the footer */
 }
 
-footer a {
-	
-    display: block;
-    color: #f8efe4; 
-    margin: 5px 0;
-    text-decoration: none;
-	
+/* Styles for the CONTENT inside the footer */
+.footer-content {
+  /* Uses .wrapper for max-width, margin, padding */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;    /* Center items horizontally */
+  gap: 10px; /* Add space between footer elements */
+}
+
+.footer-content p { /* Style copyright text */
+   margin: 0;
+   text-align: center; /* Center copyright */
+   color: #fff; /* Ensure text is visible */
+}
+
+.footer-content .Social,
+.footer-content .Legal {
+  display: flex; /* Arrange links horizontally */
+  gap: 15px;     /* Space between links */
+}
+
+footer a { /* Style footer links specifically */
+  color: #f8efe4; /* Lighter color for footer links */
+  display: inline-block; /* Needed if parent isn't flex */
+  margin: 0; /* Reset margin */
 }
 
 footer a:hover {
-	
-    color: #d35400;
-	
+  color: #d35400;
 }
 
-body {
-	
-    background-color: #f4f4f4;
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-	
+/* CSS for homepage showcase section */
+/* === Showcase Section Styling (3-Column Layout, Light Theme) === */
+
+.showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 30px 0;
 }
 
-.container {
-	
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-	
+/* Individual Showcase Card Item */
+.showcase-item {
+  background-color: #FFFFFF;
+  color: #333; /* Default dark color */
+  border: 1px solid #DDDDDD;
+  border-radius: 15px;
+  padding: 1.5em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px; /* Match gap */
+  box-sizing: border-box;
+
+  /* --- Flexbox Sizing --- */
+  flex: 1 1 30%; /* Grow, Shrink, Basis ~3 items per row */
+  min-width: 220px; /* Prevent items from becoming too small */
+  /* Removed max-width calculation to let flexbox manage sizing */
+  
+  display: flex;
+  flex-direction: column;
 }
 
-p {
-	
-    
-    text-align: center;
-   
-	
-	
+.showcase-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-	
-	text-align: center;
-	
+/* Image within Showcase Card */
+.showcase-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 4px;
 }
 
-h3 {
-	
-	text-align: center;
-	
+/* Heading within Showcase Card */
+.showcase-item h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  flex-shrink: 0;
 }
 
-img {
-	
-	display: block;
-	margin: 0 auto;
-	
+/* Paragraph Text within Showcase Card */
+.showcase-item p {
+  text-align: left;
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex-grow: 1;
 }
+
+/* Last Paragraph (often contains the link) */
+.showcase-item p:last-of-type {
+  margin-bottom: 0;
+  text-align: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* Link Style within Showcase Card */
+.showcase-item a {
+  color: #d35400; /* Use your site's accent color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.showcase-item a:hover {
+  color: #333; /* Use default dark color on hover */
+  text-decoration: underline;
+}
+
