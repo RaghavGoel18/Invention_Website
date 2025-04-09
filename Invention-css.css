@@ -138,6 +138,8 @@ article .Caption {
   height: 200px;          /* Set the desired height for header content area */
   padding-top: 10px;      /* Restore specific padding if needed */
   padding-bottom: 10px;
+  padding-left: 0px;
+	padding-right: 0px;
 }
 
 .site-logo {
