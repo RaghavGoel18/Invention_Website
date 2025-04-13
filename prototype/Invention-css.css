@@ -14,7 +14,13 @@
 	
 }
 
-
+.product_rate{
+	
+	font-size: 16px;
+	
+	margin: 10px 0;
+	
+}
 
 
 /* --- Text Alignment --- */
@@ -28,7 +34,7 @@
 
 .about_h2 {
 	
-	padding-left: 40px;
+	padding-left: 35px;
 	
 	
 }
@@ -87,6 +93,12 @@ img {
  	max-width: 100%; /* Make all images responsive by default */
   	height: auto;    /* Maintain aspect ratio */
 	
+}
+
+.about_img {
+	
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* --- Lead Display Area --- */
@@ -152,7 +164,7 @@ a {
 
 a:hover {
   color: #d35400;
-  text-decoration: underline;
+  
 }
 
 /* --- Text Alignment --- */
@@ -322,9 +334,6 @@ footer a { /* Style footer links specifically */
   margin: 0; /* Reset margin */
 }
 
-footer a:hover {
-  color: #d35400;
-}
 
 /* CSS for homepage showcase section */
 /* === Showcase Section Styling (3-Column Layout, Light Theme) === */
@@ -406,6 +415,6 @@ footer a:hover {
 
 .showcase-item a:hover {
   color: #333; /* Use default dark color on hover */
-  text-decoration: underline;
+  
 }
 
