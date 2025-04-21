@@ -2,6 +2,48 @@
 /* CSS Document */
 
 
+/*CSS for Inventors page*/
+.inventor-profile {
+	
+  padding: 3em 0;
+	
+}
+
+.inventor-grid {
+	
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 2em;
+	
+}
+
+.inventor-grid img {
+	
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+	
+}
+
+.inventor-text h2 {
+	
+  margin-top: 0;
+  font-size: 1.5em;
+	
+}
+
+.inventor-text p {
+	
+  line-height: 1.6;
+  margin-bottom: 1em;
+	
+}
+
+
+
+
 /*Gallery Grid CSS for Gallery Page*/
 /* ===================== GALLERY.html ===================== */
 .gallery {
@@ -28,6 +70,7 @@
 .lead-display {
   
   margin-top: 20px; 
+	
 }
 
 /* Style the lead image specifically if needed */
@@ -35,6 +78,7 @@
 img {
  
    margin-bottom: 25px; 
+	
 }
 
 .secondary-statement {
@@ -125,14 +169,6 @@ img {
 }
 
 
-/*CSS for Reviews page*/
-.product_rate{
-	
-	font-size: 16px;
-	margin: 10px 0;
-	
-}
-
 
 /* --- Text Alignment --- */
 
@@ -162,8 +198,7 @@ main > section {
 }
 
 .timeline-container {
-    display: grid
-;
+    display: grid;
     width: 90%;
     grid-template-columns: 1.5fr 4fr;
     gap: 0rem 2rem;
@@ -315,7 +350,7 @@ figcaption {
 
 .site-nav {
   display: flex; 
-  gap: 30px;    
+  gap: 40px;    
   margin-top: 26px;
 }
 
@@ -348,19 +383,27 @@ article > p:first-of-type { /* Selects first <p> directly under article */
 
 /* --- Review Layout (Side-by-Side) --- */
 /* ===================== REVIEWS.html ===================== */
+
 .review-layout-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 20px;
-  align-items: start;
-  margin-top: 20px;
-}
+       display: grid;
+       grid-template-columns: 1fr 2fr;
+       gap: 20px;
+       align-items: start;
+       margin-top: 20px;
+    }
 .review-layout-wrapper img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
- }
+       width: 100%;
+       height: auto;
+       border-radius: 8px;
+    }
+
 /* Features Box */
+.product_rate{
+	
+	font-size: 16px;
+	margin: 10px 0;
+	
+}
 .Features {
   border: 1px solid #A8A7A7; 
   background-color: #f8f8f8;
@@ -429,3 +472,5 @@ footer a {
   display: inline-block; 
   margin: 0; 
 }
+
+
