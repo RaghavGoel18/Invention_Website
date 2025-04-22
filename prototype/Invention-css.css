@@ -1,6 +1,56 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*CSS for interactive page8*/
+.worldmap {
+    width: 900px;
+    height: 250px;
+    border: solid #5a5a5a 1px;
+    background: url("../../Invention Pictures Resized/Interactive_Map.svg") no-repeat;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  .worldmap-item {
+	position: absolute;
+  	width: 40px;
+  	height: 40px;
+  	transform: translate(-50%, -50%);
+        z-index: 5;
+  }
+
+  .item-hover-img {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+    top: -100px;
+    left: -35px;
+  }
+
+  .worldmap-item:hover .item-hover-img {
+    display: block;
+  }
+
+  /* Example positions – adjust based on your actual map */
+	#item1  { top: 74px; left: 119px; } 
+	#item2  { top: 35px; left: 173px; }
+	#item3  { top: 18px; left: 255px; }
+	#item4  { top: 100px; left: 298px; }
+	#item5  { top: 36px; left: 339px; }
+	#item6  { top: 30px; left: 386px; }
+	#item7  { top: 48px; left: 430px; }
+	#item8  { top: 38px; left: 548px; }
+	#item9  { top: 67px; left: 614px; }
+	#item10  { top: 29px; left: 650px; }
+	#item11  { top: 31px; left: 750px; }
+	#item12  { top: 81px; left: 802px; }
 
 /*CSS for Inventors page*/
 .inventor-profile {
