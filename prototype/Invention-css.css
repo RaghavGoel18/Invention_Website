@@ -4,13 +4,14 @@
 /*CSS for interactive page8*/
 .worldmap {
     width: 900px;
-    height: 250px;
+    height: 500px;
     border: solid #5a5a5a 1px;
-    background: URL("images/Interactive_Map.svg") no-repeat;
+    background: url("../../Invention Pictures Resized/Interactive_Map.svg") no-repeat;
+	background-position: bottom;
     padding: 0;
     margin: 0;
     position: relative;
-    margin-top: 2rem;
+	margin-top: 2rem;
   }
 
   .worldmap-item {
@@ -18,7 +19,7 @@
   	width: 40px;
   	height: 40px;
   	transform: translate(-50%, -50%);
-        z-index: 5;
+    z-index: 5;
   }
 
   .item-hover-img {
@@ -30,7 +31,7 @@
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 10;
-    top: -100px;
+	top: -100px;
     left: -35px;
   }
 
@@ -39,18 +40,21 @@
   }
 
   /* Example positions – adjust based on your actual map */
-	#item1  { top: 74px; left: 119px; } 
-	#item2  { top: 35px; left: 173px; }
-	#item3  { top: 18px; left: 255px; }
-	#item4  { top: 100px; left: 298px; }
-	#item5  { top: 36px; left: 339px; }
-	#item6  { top: 30px; left: 386px; }
-	#item7  { top: 48px; left: 430px; }
-	#item8  { top: 38px; left: 548px; }
-	#item9  { top: 67px; left: 614px; }
-	#item10  { top: 29px; left: 650px; }
-	#item11  { top: 31px; left: 750px; }
-	#item12  { top: 81px; left: 802px; }
+	#item1  { top: 334px; left: 119px; } 
+	#item2  { top: 296px; left: 173px; }
+	#item3  { top: 286px; left: 255px; }
+	#item4  { top: 345px; left: 298px; }
+	#item5  { top: 294px; left: 339px; }
+	#item6  { top: 289px; left: 386px; }
+	#item7  { top: 306px; left: 430px; }
+	#item8  { top: 297px; left: 548px; }
+	#item9  { top: 325px; left: 614px; }
+	#item10  { top: 288px; left: 650px; }
+	#item11  { top: 291px; left: 750px; }
+	#item12  { top: 341px; left: 802px; }
+
+
+
 
 /*CSS for Inventors page*/
 .inventor-profile {
@@ -327,13 +331,18 @@ body {
 /* --- General Link Styles --- */
 a {
   text-decoration: none;
-  color: #333; 
+  color: #EACFAE; 
   font-family: 'Lato', sans-serif; 
 }
 
 a:hover {
   color: #d35400;
   
+}
+.site-link{
+	
+	color: black;
+	
 }
 
 /* --- Text Alignment --- */
@@ -395,12 +404,14 @@ figcaption {
 .site-logo {
   height: 180px;
   width: auto; 
-  display: block; 
+  display: block;
+  margin-right: 40px;
+  margin-left: -70px;
 }
 
 .site-nav {
   display: flex; 
-  gap: 40px;    
+  gap: 50px;    
   margin-top: 26px;
 }
 
