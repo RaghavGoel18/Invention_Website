@@ -1,6 +1,37 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+/*CSS for visual page*/
+.visual-essay-section {
+     margin-bottom: 40px;
+}
+.visual-essay-image {
+     max-width: 80%;
+     height: auto;
+     display: block;
+     margin: 20px auto;
+     border: 1px solid #ccc;
+}
+.visual-essay-text {
+     padding: 0 20px;
+     line-height: 1.6;
+}
+.visual-essay-introduction, .visual-essay-conclusion {
+     padding: 20px;
+     background-color: #f9f9f9;
+     border: 1px solid #eee;
+     margin-bottom: 30px;
+}
+.visual-essay-subsection-heading {
+     text-align: center;
+     margin-top: 30px;
+     margin-bottom: 15px;
+     font-size: 1.4em;
+     color: #555;
+}
+
+
 /*CSS for interactive page8*/
 .worldmap {
 	
@@ -614,26 +645,30 @@ article > p:first-of-type {
 
 /* --- Base Styles --- */
 body {
+  font-size: 1.15rem;
+  font-family: 'Lato', 'Segoe UI', sans-serif;
   background-color: #f4f4f4;
-  margin: 0; 
-  font-family: 'Lato', sans-serif;
-  color: #333; 
+  color: #333;
+  margin: 0;
 }
 
 /* --- General Link Styles --- */
 a {
   text-decoration: none;
-  color: #951416; 
-  font-family: 'Lato', sans-serif; 
+  color: #d35400; 
+  font-family: 'Lato', 'Segoe UI', sans-serif;
+
 }
 
 a:hover {
-  color: #d35400;
+	
+   color: #b34700;
   
 }
 .site-link{
 	
-	color: black;
+	color: #3a3a3a;
+  	font-weight: bold;
 	
 }
 
@@ -698,7 +733,7 @@ figcaption {
   width: auto; 
   display: block;
   margin-right: 40px;
-  margin-left: -70px;
+  margin-left: -125px;
 }
 
 .site-nav {
@@ -709,7 +744,16 @@ figcaption {
 
 .site-nav a {
   
+	transition: color 0.2s ease;
+	font-weight: bold;
+  	color: #3a3a3a;
   
+}
+
+.site-nav a:hover{
+	
+	color: #b34700;
+	
 }
 
 /* --- Main Content Styles --- */
@@ -793,8 +837,881 @@ article > p:first-of-type {
 
 /* CSS for the Footer for every page */
 footer {
-  background-color: #2e4f3d;
-  color: #fff;
+  background-color: #333333;
+  color: #f4f4f4;
+  padding: 20px 0; 
+  margin-top: 40px; 
+}
+
+/* Styles for the CONTENT inside the footer */
+.footer-content {
+ 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 10px; 
+}
+
+.footer-content p { 
+   margin: 0;
+   text-align: center; 
+   color: #fff; 
+}
+
+.footer-content .Social,
+.footer-content .Legal {
+  display: flex; 
+  gap: 15px;     
+}
+
+footer a { 
+  color: #f8efe4; 
+  display: inline-block; 
+  margin: 0; 
+}
+
+
+@charset "utf-8";
+/* CSS Document */
+
+
+/*CSS for visual page*/
+.visual-essay-section {
+     margin-bottom: 40px;
+}
+.visual-essay-image {
+     max-width: 80%;
+     height: auto;
+     display: block;
+     margin: 20px auto;
+     border: 1px solid #ccc;
+}
+.visual-essay-text {
+     padding: 0 20px;
+     line-height: 1.6;
+}
+.visual-essay-introduction, .visual-essay-conclusion {
+     padding: 20px;
+     background-color: #f9f9f9;
+     border: 1px solid #eee;
+     margin-bottom: 30px;
+}
+.visual-essay-subsection-heading {
+     text-align: center;
+     margin-top: 30px;
+     margin-bottom: 15px;
+     font-size: 1.4em;
+     color: #555;
+}
+
+
+/*CSS for interactive page8*/
+.worldmap {
+	
+    width: 900px;
+    height: 500px;
+    border: solid #5a5a5a 1px;
+    background: url("../../Invention Pictures Resized/Interactive_Map.svg") no-repeat;
+	background-color:#87CEEB;
+	background-position: bottom;
+    padding: 0;
+    margin: 0;
+    position: relative;
+	margin-top: 2rem;
+	
+  }
+
+.worldmap-item {
+	
+	position: absolute;
+  	width: 40px;
+  	height: 40px;
+  	transform: translate(-50%, -50%);
+    z-index: 5;
+	
+  }
+
+.map-intro-text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.05em;
+    color: #555;
+}
+.inline-marker-example img {
+    margin-bottom: 0; 
+}
+
+/* Container for map */
+.map-area-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* Modifications for marker link */
+.worldmap-item {
+	position: absolute;
+	width: auto;
+	height: auto;
+	transform: translate(-50%, -50%);
+    z-index: 5;
+    display: inline-block;
+    line-height: 0;
+  
+     transition: transform 0.2s ease;
+}
+
+
+.marker-icon {
+    width: 28px;
+    height: 28px; 
+    display: block;
+    cursor: pointer;
+    transition: transform 0.2s ease; 
+}
+.worldmap-item:hover .marker-icon {
+     transform: scale(1.2); 
+}
+
+
+/* --- Marker Categories --- */
+/* Define appearance for each category - REPLACE 'content: url(...)' with actual paths */
+.category-cleaning .marker-icon { content: url('icons/cleaning-marker.svg'); }
+.category-lighting .marker-icon { content: url('icons/lighting-marker.svg'); }
+.category-kitchen .marker-icon { content: url('icons/kitchen-marker.svg'); }
+.category-media .marker-icon { content: url('icons/media-marker.svg'); }
+.category-entertainment .marker-icon { content: url('icons/entertainment-marker.svg'); }
+.category-personal .marker-icon { content: url('icons/personal-marker.svg'); }
+.category-office .marker-icon { content: url('icons/office-marker.svg'); }
+/* Add more category styles if needed */
+
+
+/* --- Pop-up Image Positioning (Adjust relative to marker icon) --- */
+/* Use general selector for all hover images */
+[class^="item-hover-img"] {
+    display: none;
+    position: absolute;
+    width: 120px; /* Or your desired width */
+    height: auto;
+    border: 3px solid white;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 10;
+   
+    bottom: calc(100% + 8px); 
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Your existing :hover rules to display them are fine */
+.worldmap-item:hover [class^="item-hover-img"] {
+    display: block;
+}
+
+.worldmap-item::after {
+    content: attr(data-name); 
+    position: absolute;
+    display: none;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px; 
+    background-color: rgba(0, 0, 0, 0.75); 
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    white-space: nowrap; 
+    z-index: 11; 
+    pointer-events: none;
+}
+
+.worldmap-item:hover::after {
+   
+     display: block;
+}
+
+
+/* --- Legend and Profile Styles --- */
+.legend-icon {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 0; 
+}
+
+#location-profiles {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.location-profile {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: auto; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.location-profile h3 {
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    display: inline-block;
+    flex-basis: 100%;
+}
+
+.back-to-map-link {
+    float: right;
+    font-size: 0.9em;
+    margin-left: 15px;
+    line-height: 1.6;
+}
+
+.profile-image {
+    max-width: 200px;
+    height: auto;
+    float: right;
+    margin-left: 20px; 
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 4px;
+    align-self: flex-end;
+}
+
+.profile-data,
+.profile-rating {
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  
+}
+
+.profile-data span,
+.profile-rating span {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.profile-data i,
+.profile-rating i {
+    margin-right: 10px;
+    color: #951416;
+    width: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.profile-rating strong {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-rating i.fa-star,
+.profile-rating i.fa-star-half-alt {
+    color: #f39c12;
+    font-size: 1.1em;
+}
+
+.profile-rating i.far.fa-star {
+    color: #ccc;
+    font-size: 1.1em;
+}
+
+.profile-sources {
+    font-size: 0.9em;
+    margin-top: 15px;
+    clear: both; 
+    flex-basis: 100%; 
+}
+
+.profile-sources strong {
+    font-weight: bold;
+}
+
+
+.profile-rating i.fa-star, .profile-rating i.fa-star-half-alt {
+     color: #f39c12; 
+     font-size: 1.1em; 
+}
+.profile-rating i.far.fa-star {
+    color: #ccc;
+     font-size: 1.1em;
+}
+.profile-sources {
+    font-size: 0.9em;
+    margin-top: 15px;
+    clear: both; 
+}
+.profile-sources strong {
+    font-weight: bold;
+}
+
+.back-to-map-link {
+    float: right;
+    font-size: 0.9em;
+    margin-left: 15px;
+    line-height: 1.6; 
+}
+
+
+.rating-legend {
+     margin-top: 30px;
+     padding: 20px;
+     border: 1px solid #eee;
+     background-color: #f8f8f8;
+     font-size: 0.9em;
+     border-radius: 4px;
+}
+.rating-legend h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+     font-size: 1.1em;
+}
+.rating-legend p {
+    text-align: left;
+    font-size: inherit;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+.rating-legend i {
+    margin-right: 3px;
+     font-size: 1.1em;
+}
+.rating-legend i.fa-star, .rating-legend i.fa-star-half-alt { color: #f39c12; }
+.rating-legend i.far.fa-star { color: #ccc; }
+
+
+.location-profile::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.item-hover-img, .item-hover-img1, .item-hover-img2, .item-hover-img3 {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+   
+    bottom: calc(100% + 8px); 
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+ .worldmap-item:hover .item-hover-img {
+	  
+    display: block;
+	  
+  }
+
+.worldmap-item:hover .item-hover-img1 {
+	  
+    display: block;
+	  
+ }
+.worldmap-item:hover .item-hover-img2 {
+	  
+    display: block;
+	  
+ }
+.worldmap-item:hover .item-hover-img3 {
+	 
+    display: block;
+	  
+ }
+/*Locations for images on the map*/
+#item1  { top: 334px; left: 119px; } 
+#item2  { top: 296px; left: 173px; }
+#item3  { top: 286px; left: 255px; }
+#item4  { top: 345px; left: 298px; }
+#item5  { top: 294px; left: 339px; }
+#item6  { top: 289px; left: 386px; }
+#item7  { top: 306px; left: 430px; }
+#item8  { top: 297px; left: 548px; }
+#item9  { top: 325px; left: 614px; }
+#item10  { top: 288px; left: 650px; }
+#item11  { top: 291px; left: 750px; }
+#item12  { top: 341px; left: 802px; }
+
+
+/*CSS for Inventors page*/
+.inventor-profile {
+	
+  padding: 3em 0;
+	
+}
+
+.inventor-grid {
+	
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 2em;
+	
+}
+
+.inventor-grid img {
+	
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+	
+}
+
+.inventor-text h2 {
+	
+  margin-top: 0;
+  font-size: 1.5em;
+	
+}
+
+.inventor-text p {
+	
+  line-height: 1.6;
+  margin-bottom: 1em;
+	
+}
+
+
+
+
+/*Gallery Grid CSS for Gallery Page*/
+/* ===================== GALLERY.html ===================== */
+.gallery {
+	
+	width: 300px;
+	text-align: center;
+    
+}
+
+.gallery-grid{
+	
+	display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-items: start;
+    justify-content: space-between;
+	
+}
+
+
+/* CSS for home page*/
+/* ===================== HOME.html ===================== */
+.lead-display {
+  
+  margin-top: 20px; 
+	
+}
+
+/* Style the lead image specifically if needed */
+.lead-display /* ===================== GENERAL STYLES (ALL PAGES) ===================== */
+img {
+ 
+   margin-bottom: 25px; 
+	
+}
+
+.secondary-statement {
+  text-align: center;
+  margin-bottom: 20px; 
+  color: #555; 
+  font-size: 1.1em;
+}
+
+.showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+/* Individual Showcase Card Item */
+.showcase-item {
+  background-color: #FFFFFF;
+  color: #333; 
+  border: 1px solid #DDDDDD;
+  border-radius: 15px;
+  padding: 1.5em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+
+  /* --- Flexbox Sizing --- */
+  flex: 1 1 30%; 
+  min-width: 220px;
+
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Image within Showcase Card */
+.showcase-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+/* Heading within Showcase Card */
+.showcase-item h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  flex-shrink: 0;
+}
+
+/* Paragraph Text within Showcase Card */
+.showcase-item p {
+  text-align: left;
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+/* Last Paragraph (often contains the link) */
+.showcase-item p:last-of-type {
+  margin-bottom: 0;
+  text-align: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* Link Style within Showcase Card */
+.showcase-item a {
+  color: #d35400; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.showcase-item a:hover {
+  color: #333; 
+  
+}
+
+
+
+/* --- Text Alignment --- */
+
+./* ===================== ABOUT.html and INVENTORS.html ===================== */
+about_h2, .about_h3 {
+	
+	text-align: left;
+	
+	
+}
+
+.about_h2 {
+	
+	padding-left: 35px;
+	
+	
+}
+
+.section_standard{
+	
+	margin: 0 0 3em;
+	
+	
+}
+main > section {
+    margin: 0 0 3em;
+}
+
+.timeline-container {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 1.5fr 4fr;
+    gap: 0rem 2rem;
+    align-items: top;
+}
+
+.profile-container {
+	
+	display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem 4rem;
+    align-items: center;
+	
+}
+
+
+/* --- General Image Styles --- */
+/* Ensure this rule is present to center block images */
+img {
+ 	
+}
+
+.home_img {
+	
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+ 	max-width: 100%; 
+  	height: auto;    
+	
+}
+
+.about_img {
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* --- Intro Text Paragraphs --- */
+.Intro_Text {
+  margin-bottom: 15px; 
+}
+
+/* Ensure default paragraph alignment is left */
+p {
+  text-align: left;
+}
+
+/* Keep caption centered if needed */
+article .Caption {
+  
+  text-align: left; 
+}
+
+/* Center author line if desired */
+article > p:first-of-type { 
+  
+  text-align: center; 
+}
+
+
+
+
+
+
+
+/* --- Base Styles --- */
+body {
+  font-size: 1.15rem;
+  font-family: 'Lato', 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+}
+
+/* --- General Link Styles --- */
+a {
+  text-decoration: none;
+  color: #d35400; 
+  font-family: 'Lato', 'Segoe UI', sans-serif;
+
+}
+
+a:hover {
+	
+   color: #b34700;
+  
+}
+.site-link{
+	
+	color: #3a3a3a;
+  	font-weight: bold;
+	
+}
+
+/* --- Text Alignment --- */
+
+p {
+  	text-align: left;
+	font-size: 1.1rem;
+	line-height: 1.6;
+}
+
+
+h1, h2, h3 { 
+  text-align: center;
+	line-height: 1.2;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 8px;
+}
+
+
+/* --- Main Wrapper (for <main> content) --- */
+.wrapper {
+  max-width: 900px; 
+  width: 100%;     
+  margin-left: auto; 
+  margin-right: auto; 
+  box-sizing: border-box; 
+}
+
+/* --- Header Styles (Full Width) --- */
+.site-header {
+  background-color: #f8efe4;
+
+}
+
+/* Styles for the CONTENT inside the header */
+.header-content {
+  
+    display: flex;              
+    align-items: center;            
+    justify-content: space-between;
+    height: 200px;                 
+    padding-top: 10px;             
+    padding-bottom: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	
+}
+
+.site-logo {
+  height: 180px;
+  width: auto; 
+  display: block;
+  margin-right: 40px;
+  margin-left: -125px;
+}
+
+.site-nav {
+  display: flex; 
+  gap: 50px;    
+  margin-top: 26px;
+}
+
+.site-nav a {
+  
+	transition: color 0.2s ease;
+	font-weight: bold;
+  	color: #3a3a3a;
+  
+}
+
+.site-nav a:hover{
+	
+	color: #b34700;
+	
+}
+
+/* --- Main Content Styles --- */
+article {
+  margin-bottom: 50px;
+}
+
+article > img {
+  max-width: 100%; 
+  height: auto;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+/* Style for Author line */
+article > p:first-of-type { 
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 15px;
+  text-align: center; 
+}
+
+
+/* ===================== REVIEWS.html ===================== */
+
+.review-layout-wrapper {
+       display: grid;
+       grid-template-columns: 1fr 2fr;
+       gap: 20px;
+       align-items: start;
+       margin-top: 20px;
+    }
+.review-layout-wrapper img {
+       width: 100%;
+       height: auto;
+       border-radius: 8px;
+    }
+
+/* Features Box */
+.product_rate{
+	
+	font-size: 16px;
+	margin: 10px 0;
+	
+}
+.Features {
+  border: 1px solid #A8A7A7; 
+  background-color: #f8f8f8;
+  padding: 15px 20px;
+  flex: 0 0 280px;
+  box-sizing: border-box;
+}
+
+.Features ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.Features li {
+  margin-bottom: 6px;
+}
+
+.Features li:last-child {
+  margin-bottom: 0;
+}
+
+/* Main Text Column in Review */
+.review-main-text {
+  flex: 1; 
+  min-width: 250px; /
+  box-sizing: border-box;
+}
+
+.review-main-text > p:first-child {
+  margin-top: 0; 
+}
+
+
+/* CSS for the Footer for every page */
+footer {
+  background-color: #333333;
+  color: #f4f4f4;
   padding: 20px 0; 
   margin-top: 40px; 
 }
